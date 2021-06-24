@@ -1,0 +1,44 @@
+@mixin mq($width, $type: max) {
+  @if $type == min {
+    $width: $width + 1;
+  }
+  @media (#{$type}-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin res($min-width, $max-width) {
+  @media (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+    @content;
+  }
+}
+
+@mixin object-fit($fit: cover, $position: null){
+  object-fit: $fit;
+
+  @if $position {
+    object-position: $position;
+      font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+      font-family: 'object-fit: #{$fit}';
+  }
+}
+
+@mixin line-clamp($num, $num-sp: null) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+  overflow: hidden;
+
+  @if $num-sp {
+    @include mq($break-mobile) {
+      -webkit-line-clamp: $num-sp;
+    }
+  }
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

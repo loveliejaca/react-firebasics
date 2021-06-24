@@ -1,0 +1,94 @@
+.menu {
+  box-shadow: 0 -3px 9px 0px #ccb1a4;
+  background: $color-4th;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  justify-content: space-between;
+  bottom: 0;
+  padding: 0 10px;
+  display: flex;
+
+}
+
+.menu-item {
+  display: block;
+  height: 100%;;
+}
+
+.menu-item-link {
+  justify-content: flex-end;
+  padding:0 5px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+
+.menu-lbl {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: $color-primary;
+  margin-top: 5px;
+  line-height: 1;
+}
+
+.menu-ico-user {
+  width: 30px;
+  height: 29px;
+  fill: $base-color;
+}
+
+.menu-ico-notif {
+  width: 30px;
+  height: 26px;
+  fill: $base-color;
+}
+
+.menu-ico-activity {
+  width: 30px;
+  height: 26px;
+  stroke: $base-color;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.menu-ico-service {
+  width: 30px;
+  height: 29px;
+  fill: $base-color;
+}
+
+
+.menu-account {
+  background-color: $base-color;
+  height: calc(100vh - 60px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-account-header {
+  display: flex;
+  align-items: center;
+  background: $color-4th;
+  height: 50px;
+  color: $color-primary;
+  padding: 0 10px;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.menu-account-list {
+  padding: 20px;
+}
+
+.menu-account-item {
+  height: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid $color-6th;
+}

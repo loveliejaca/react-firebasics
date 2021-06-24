@@ -1,0 +1,185 @@
+.profile {
+padding: 15px 0 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 350px;
+    height: 180px;
+    width: 100%;
+    background-image: url('../../images/wave-top-right.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    pointer-events: none;
+  }
+}
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.profile-logout {
+  margin-right: 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $color-redish-1;
+}
+
+
+.profile-header {
+  padding: 6px 6px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-edit-btn {
+  background-color: $color-1st;
+  border-radius: 5px;
+  padding: 2px 10px;
+  font-size: 14px;
+  color: $color-primary;
+  box-shadow: 0 2px 3px 0px #7d382b;
+}
+
+.profile-title-head {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-title {
+  color: $color-primary;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  color: $color-primary;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.profile-body {
+  padding: 0 15px;
+  position: relative;
+  // z-index: 1;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+     background: linear-gradient(to bottom, transparent 0%, $color-1st 100%);
+  }
+}
+
+.profile-heading {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.profile-upload-file {
+  background-color: $color-1st;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 15px;
+  color: $color-primary;
+  box-shadow: 0 2px 3px 0px #7d382b;
+  position: relative;
+
+  + input {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.profile-date {
+  display: block;
+  color: $color-redish-4;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.profile-add {
+  min-width: 40px;
+  min-height: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: $color-redish-1;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  z-index: 5;
+  transform: translateX(-50%);
+  box-shadow: 1px 1px 3px 2px #650d34, inset 3px 3px 0 $color-redish-2;
+
+  &:before,
+  &:after {
+    background-color: $color-primary;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+
+  &:before {
+    display: block;
+    height: 20px;
+    width: 3px;
+  }
+  &:after {
+    display: block;
+    width: 20px;
+    height: 3px;
+  }
+}
+
+
+.rocket {
+  background-image: url('../../images/rocket.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+}
+
+.rocket-calendar {
+  transition: transform 1s ease;
+  bottom: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &.is-fly {
+    transform: translateX(-50%) translateY(-110vh);
+  }
+}

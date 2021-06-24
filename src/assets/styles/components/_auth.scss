@@ -1,0 +1,158 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.auth-login {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 225px;
+    width: 100%;
+    background-image: url('../../images/wave-top.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+
+    @include mq(400) {
+      height: 180px;
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -7px;
+    height: 350px;
+    height: 235px;
+    width: 105%;
+    background-image: url('../../images/wave-top.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.08;
+    @include mq(400) {
+      height: 180px;
+    }
+  }
+}
+
+.auth-inner {
+  border-radius: 10px;
+  max-width: 400px;
+  height: 100%;
+  padding: 40px;
+  width: 100%;
+  overflow: auto;
+  padding-top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .auth-login & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+}
+
+.auth-monster {
+  display: flex;
+  justify-content: center;
+  height: 190px;
+}
+
+.auth-title {
+  display: flex;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  justify-content: center;
+  line-height: 1;
+  font-size: 23px;
+  text-transform: uppercase;
+
+  z-index: 1;
+  color: $color-1st;
+  justify-content: flex-start;
+  padding-top: 40px;
+  padding-left: 40px;
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+
+  .auth-signup & {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      height: 225px;
+      width: 100%;
+      background-image: url('../../images/wave-top-1-pc.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      pointer-events: none;
+      z-index: -1;
+
+      @include mq(767) {
+        background-image: url('../../images/wave-top-1.png');
+      }
+      @include mq(400) {
+        height: 180px;
+      }
+    }
+  }
+}
+
+.auth-other {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1.5;
+  margin-top: 10px;
+  a {
+    color: $color-aquaish-4;
+    margin-left: 10px;
+    border-bottom: 1px solid $color-aquaish-4;
+    line-height: 1;
+  }
+}
+
+.auth-alert {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #f7b8b8;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  min-height: 50px;
+  span {
+    line-height: 1;
+    color: #a01c1c;
+  }
+}
+
+.auth-register {
+  margin-top: 20px;
+}

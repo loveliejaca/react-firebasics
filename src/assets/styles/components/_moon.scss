@@ -1,0 +1,127 @@
+.moon-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+// .moon-box-home {
+//   position: absolute;
+//   bottom: 0px;
+//   left: 0;
+// }
+
+.moon {
+  position: relative;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  background-color: #f6f6f6;
+  transform-origin: center;
+
+
+  &:after {
+    background-color: rgba(#f6f6f6, 0.05);
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 115%;
+    height: 115%;
+    position: absolute;
+    transform-origin: center;
+    animation: moon-glow 6s ease infinite;
+    top: -7.5%;
+    left: -7.5%;
+  }
+
+  &:before {
+    transform-origin: center;
+    background-color: rgba(#f6f6f6, 0.02);
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 130%;
+    height: 130%;
+    position: absolute;
+    top: -15%;
+    left: -15%;
+    animation: moon-glow 8s ease infinite;
+  }
+
+
+  span {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    background: #f6f6f6;
+    box-shadow: inset 0 14px 6px #c6c5c9, 0 -48px 0 -25px #c6c5c9, -53px -11px 0 -27px #c6c5c9, -6px 64px 0 -25px #c6c5c9, 27px -83px 0 -28px #c6c5c9;
+
+    top: 24%;
+    left: 38%;
+
+    &:nth-child(2) {
+      top: 47%;
+      left: 8%;
+      transform: scale(0.5) rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      top: 77%;
+      left: 72%;
+      transform: scale(0.7) rotate(-63deg);
+    }
+
+    &:nth-child(4) {
+      top: 80%;
+      left: 12%;
+      transform: rotate(-10deg);
+    }
+
+    &:nth-child(5) {
+      top: 7%;
+      left: 73%;
+      transform: scale(1.2) rotate(330deg);
+    }
+    &:nth-child(6) {
+      top: 8%;
+      left: 8%;
+      transform: scale(0.7) rotate(45deg);
+    }
+    &:nth-child(7) {
+      top: 63%;
+      left: 44%;
+      transform: scale(0.5) rotate(23deg);
+    }
+    &:nth-child(8) {
+      top: 42%;
+    left: 74%;
+    transform: scale(0.8) rotate(325deg);
+    }
+  }
+}
+
+.moon-inner {
+  position: relative;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+
+
+@keyframes moon-glow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+   transform: scale(1);
+  }
+}

@@ -1,0 +1,140 @@
+.service {
+  padding-top: 20px;
+}
+
+.service-list{
+  background-color: #efdbd2;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 20px 20px 0;
+  border-radius: 15px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - 10%) / 3);
+  margin-bottom: 5%;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 5%;
+  }
+}
+
+.service-box {
+  width: 100%;
+  // height: 150px;
+}
+
+.service-item-title {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+
+.service-title {
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+}
+
+.service-box-img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid $color-5th;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  position: relative;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &:before {
+      color: $color-4th;
+      text-shadow: 2px 2px 3px #f9ad89;
+      content: 'TiG';
+      display: block;
+      font-family: $pacifico-font;
+      font-size: 35px;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    position: absolute;
+    border: 1px solid #fff0e9;
+    top: 6px;
+    left: 6px;
+    border-radius: 15px;
+    z-index: 1;
+  }
+
+
+  &:after {
+    content: '';
+    box-shadow: inset 0 0 16px 0px #ce8254;
+    display: block;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    position: absolute;
+    border: 3px solid $color-5th;
+    border-radius: 15px;
+  }
+}
+
+.service-desc {
+  margin: 10px 0;
+}
+
+.service-type {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.service-user-list {
+  width: 100%;
+}
+
+.service-user-item {
+  background-color: $color-6th;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 3px 5px 0px #ccb1a4;
+  margin-bottom: 15px;
+}
+
+.service-user-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-5th;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.service-user-dtl {
+  width: calc(100% - 70px);
+}

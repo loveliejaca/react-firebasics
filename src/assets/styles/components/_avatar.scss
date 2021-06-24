@@ -1,0 +1,109 @@
+.avatar {
+  position: relative;
+  z-index: 5;
+}
+
+.avatar-img-box {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+.avatar-img {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 3px solid $color-1st;
+  background-color: $color-1st;
+  // margin-right: 20px;
+  position: relative;
+  z-index: 1;
+
+
+  &:after {
+    border: 1px solid $color-redish-1;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 130%;
+    width: 130%;
+    top: -15%;
+    animation: spin3D 1.5s linear 0s infinite;
+  }
+
+  &:before {
+    border: 1px solid $color-aquaish-1;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    animation: spin3D 2.5s linear 0s infinite;
+  }
+
+
+  &.avatar-img-big {
+    border: 3px solid $color-moon-2;
+    background-color: $color-moon-1;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+
+.avatar-menu {
+  border-radius: 7px;
+  color: $color-1st;
+  position: absolute;
+  font-size: 13px;
+  width: 100px;
+  left: -20px;
+  padding: 5px 5px 7px;
+  top: 0;
+  background-color: $color-moon-2;
+  transform: scale(0) translateX(0);
+  transition: transform 0.1s ease 0.3s, opacity 0.5s ease;
+  opacity: 0;
+
+  &.is-show {
+    transition: transform 0.5s ease, opacity 0.5s ease 0.3s;
+    opacity: 1;
+    transform: scale(1) translateX(-90px);
+  }
+
+}
+
+.avatar-menu-item {
+  box-shadow: 0 2px 0 #02443d;
+  background-color:$color-aquaish-1;
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-align: center;
+
+
+  &:not(:last-child) {
+    box-shadow: 0 2px 0 #630d33;
+    background-color: $color-redish-1;
+    color: $color-pinkish-2;
+    margin-bottom: 7px;
+  }
+}
+
+@keyframes spin3D {
+  from {
+    transform: rotate3d(.5, .5, .5, 360deg);
+  }
+  to {
+    transform: rotate3d( 360deg);
+  }
+}

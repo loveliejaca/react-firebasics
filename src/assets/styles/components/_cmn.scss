@@ -1,0 +1,203 @@
+.cmn {
+  display: block;
+}
+
+.cmn-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 150px;
+  min-height: 45px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: $color-2nd;
+  max-width: 375px;
+  box-shadow: 0 3px 4px 0px #0a253c;
+}
+
+.cmn-btn-create {
+  margin-bottom: 20px;
+}
+
+.cmn-btn-submit {
+  background-color: $color-redish-1;
+  color: $color-pinkish-2;
+  width: 250px;
+}
+
+.cmn-btn-note {
+  background-color: $color-blueish-2;
+  font-size: 13px;
+  min-height: 45px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+.cmn-btn-add {
+  min-width: 40px;
+  min-height: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: $color-redish-1;
+  border-radius: 50%;
+  position: relative;
+      box-shadow: 1px 1px 3px 2px #650d34, inset 3px 3px 0 $color-redish-2;
+
+  &:before,
+  &:after {
+    background-color: $color-primary;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+
+  &:before {
+    display: block;
+    height: 20px;
+    width: 3px;
+  }
+  &:after {
+    display: block;
+    width: 20px;
+    height: 3px;
+  }
+}
+
+
+
+
+
+
+
+.cmn-select {
+  border: 1px solid $color-5th;
+  background: $color-6th;
+  border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15px;
+    right: 15px;
+    top: 44%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 15px;
+    border-bottom: 3px solid $color-5th;
+    border-left: 3px solid $color-5th;
+  }
+
+  select {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+  }
+}
+
+.cmn-ico {
+  display: block;
+  position: relative;
+}
+
+.cmn-ico-account {
+  height: 29px;
+  width: 31px;
+  overflow: hidden;
+  background-image: url('../../images/ico-user.svg');
+  background-repeat: no-repeat;
+  // &:before {
+  //   display: block;
+  //   margin: 0 auto 1px;
+  //   background: $base-color;
+  //   border-radius: 50%;
+  //   content: '';
+  //   display: block;
+  //   position: relative;
+  //   width: 12px;
+  //   height: 12px;
+  // }
+  // &:after {
+  //   background: $base-color;
+  //   border-radius: 35%;
+  //   content: '';
+  //   display: block;
+  //   position: relative;
+  //   width: 20px;
+  //   height: 20px;
+  // }
+}
+
+ .cmn-ico-logo {
+   font-family: $pacifico-font;
+   color:  $base-color;
+   text-shadow: 2px 2px #562005;
+   font-size: 21px;
+   line-height: 1.4;
+   letter-spacing: 0.12em;
+   font-style: normal;
+ }
+
+
+
+ .cmn-list {
+   width: 100%;
+ }
+
+ .cmn-list-item {
+   background-color: $color-6th;
+   display: flex;
+   align-items: flex-start;
+   padding: 10px;
+   border-radius: 15px;
+   width: 100%;
+   box-shadow: 0 3px 5px 0px #ccb1a4;
+   margin-bottom: 15px;
+ }
+
+ .cmn-list-dtl-inner {
+   width: calc(100% - 50px);
+ }
+
+ .cmn-list-img   {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: $color-5th;
+   border-radius: 50%;
+   height: 60px;
+   width: 60px;
+   margin-right: 10px;
+
+ }
+ .cmn-no-image {
+   font-family: $pacifico-font;
+   color: $color-primary;
+   font-size: 22px;
+   text-shadow: 2px 2px #b35340;
+   position: relative;
+   top: -2px;
+   left: -1px;
+ }
+
+ .cmn-list-dtl {
+   width: calc(100% - 70px);
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .cmn-list-date {
+   display: block;
+   text-align: right;
+  font-size: 15px;
+   width: 70px;
+ }

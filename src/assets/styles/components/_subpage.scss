@@ -1,0 +1,52 @@
+.subpage {
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.subpage-heading {
+  color: $color-primary;
+  font-size: 25px;
+  margin-bottom: 20px;
+
+  &.subpage-heading-blueish {
+    color: $color-blueish-3;
+  }
+  &.subpage-heading-redish {
+    color: $color-redish-4;
+  }
+}
+
+.subpage-event,
+.subpage-profile {
+  position: relative;
+  padding-top: 55px;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 350px;
+    height: 180px;
+    width: 100%;
+    background-image: url('../../images/wave-top-right.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.subpage-inner {
+  display: block;
+  position: relative;
+  z-index: 2;
+}

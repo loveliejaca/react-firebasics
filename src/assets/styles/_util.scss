@@ -1,0 +1,18 @@
+.u-scroll-lock {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.u-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.u-hide {
+  display: none;
+}
