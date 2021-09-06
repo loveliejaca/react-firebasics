@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import { useHistory } from "react-router-dom"
-import { useUser } from "./../../hooks/useUser.js";
+// import { useUser } from "./../../hooks/useUser.js";
 import { connect, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getUser, updateUser } from '../../store/actions/userActions'

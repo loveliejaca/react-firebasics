@@ -12,6 +12,8 @@ import { ReactReduxFirebaseProvider,reactReduxFirebase, getFirebase } from 'reac
 import fbConfig from './config/fbConfig'
 
 
+
+
 const store = createStore(rootReducer, /* preloadedState, */
   compose(
     applyMiddleware(
@@ -29,6 +31,7 @@ const store = createStore(rootReducer, /* preloadedState, */
   )
 );
 
+console.log("store", store);
 ReactDOM.render(
   <Provider store={store}>
     <App />

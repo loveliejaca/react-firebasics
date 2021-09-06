@@ -26,7 +26,8 @@ export const updateUser = (data, callBack) => {
       firstname: data.data.firstname,
       lastname: data.data.lastname,
       number: data.data.number,
-      avatar: data.data.avatar
+      avatar: data.data.avatar,
+      email: data.data.email
     }
 
     user.updateProfile({

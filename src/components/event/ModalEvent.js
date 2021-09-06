@@ -27,6 +27,7 @@ const ModalEvent = (props) => {
 
 
   const [state, setState] = useState({
+    email:  props.type === 'create' ? '' : data.data.email,
     startDate: props.type === 'create' ? null : moment(dateInput).startOf('day').toDate(),
     endDate: props.type === 'create' ? null : moment(dateInput).endOf('day').toDate(),
     time: props.type === 'create' ? '08:00' : data.data.time,
